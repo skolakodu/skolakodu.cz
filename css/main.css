@@ -20,6 +20,7 @@ body {
 
 .header-nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: 30px 0;
 }
@@ -28,13 +29,24 @@ body {
   display: flex;
 }
 
+.header-menu__item {
+  margin-right: 20px;
+  position: relative;
+}
+
 .header-menu__item--dropdown:hover .header-menu__dropdown {
   display: block;
+}
+
+.header-menu__item--dropdown:hover .arrow-down {
+  border-bottom: 5px solid black;
+  border-top: 0px solid black;
 }
 
 .header-menu__dropdown {
   display: none;
   position: absolute;
+  left: -50%;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -55,5 +67,27 @@ body {
 
 .header-logo img {
   max-width: 150px;
+}
+
+.dropbtn {
+  display: flex;
+  align-items: center;
+}
+
+.dropbtn .arrow-down {
+  margin-left: 10px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
 }
 /*# sourceMappingURL=main.css.map */
